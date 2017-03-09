@@ -21,18 +21,18 @@ public class UserController {
 	@RequestMapping("/showUser")
 	public String toIndex(HttpServletRequest request,Model model){
 		int userId = Integer.parseInt(request.getParameter("id"));
-		User user = this.userService.getUserById(userId,null);
+		User user = this.userService.getUserById(null);
 		model.addAttribute("user", user);
 		return "showUser";
 	}
 
 
-	@Router
 	@RequestMapping("/test")
 	public String test(UserVo userVo,Model model){
 		userVo = new UserVo();
+		userVo.setId(1);
 		userVo.setUserNum("2323sdf");
-		User user = this.userService.getUserById(userVo.getId(),userVo);
+		User user = this.userService.getUserById(userVo);
 		model.addAttribute("user", user);
 		return "showUser";
 	}

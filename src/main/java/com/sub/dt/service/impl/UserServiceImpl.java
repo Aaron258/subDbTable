@@ -18,11 +18,8 @@ public class UserServiceImpl implements IUserService {
 
 	@Router
 	@Override
-	public User getUserById(int userId,UserVo userVo) {
+	public User getUserById(UserVo userVo) {
 		// TODO Auto-generated method stub
-		return this.userDao.selectByPrimaryKey(userId);
+		return this.userDao.selectByPrimaryKey(userVo.getId());
 	}
-
-
-
 }
