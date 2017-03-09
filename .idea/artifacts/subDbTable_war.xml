@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="subDbTable:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="subDbTable.war">
+      <element id="artifact" artifact-name="subDbTable:war exploded" />
+    </root>
+  </artifact>
+</component>
