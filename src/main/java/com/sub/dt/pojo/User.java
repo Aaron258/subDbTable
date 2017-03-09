@@ -1,6 +1,8 @@
 package com.sub.dt.pojo;
 
-public class User {
+import com.sub.dt.dbRouting.BaseDomain;
+
+public class User extends BaseDomain{
     private Integer id;
 
     private String userName;
@@ -40,4 +42,5 @@ public class User {
     public void setAge(Integer age) {
         this.age = age;
     }
+
 }

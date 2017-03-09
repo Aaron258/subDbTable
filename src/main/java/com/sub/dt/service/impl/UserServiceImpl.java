@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import com.sub.dt.dbRouting.annotation.Router;
 import com.sub.dt.vo.UserVo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import com.sub.dt.dao.IUserDao;
@@ -17,9 +18,10 @@ public class UserServiceImpl implements IUserService {
 	private IUserDao userDao;
 
 	@Router
-	@Override
-	public User getUserById(UserVo userVo) {
+	public User selectByUserNum(UserVo userVo) {
 		// TODO Auto-generated method stub
-		return this.userDao.selectByPrimaryKey(userVo.getId());
+		User user = new User();
+		BeanUtils.copyProperties(userVo,user);
+		return this.userDao.selectByUserNum(user);
 	}
 }

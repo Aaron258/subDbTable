@@ -31,6 +31,25 @@
 		<property name="driverClassName" value="${driver}" />
 		<property name="url" value="${jdbc.mysql.url2}" />
 		<property name="username" value="${jdbc.mysql.username2}" />
+		<property name="password" value="${jdbc.mysql.password2}" />
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="${initialSize}"></property>
+		<!-- 连接池最大数量 -->
+		<property name="maxActive" value="${maxActive}"></property>
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="${maxIdle}"></property>
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="${minIdle}"></property>
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="${maxWait}"></property>
+	</bean>
+
+
+
+	<bean id="dataSource3" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${driver}" />
+		<property name="url" value="${jdbc.mysql.url3}" />
+		<property name="username" value="${jdbc.mysql.username3}" />
 		<property name="password" value="${jdbc.mysql.password3}" />
 		<!-- 初始化连接大小 -->
 		<property name="initialSize" value="${initialSize}"></property>
@@ -51,6 +70,7 @@
 			<map>
 				<entry key="db1" value-ref="dataSource1" />
 				<entry key="db2" value-ref="dataSource2" />
+				<entry key="db3" value-ref="dataSource3" />
 			</map>
 		</property>
 	</bean>
@@ -67,14 +87,15 @@
 	<bean id="dbRuleSet1" class="com.sub.dt.dbRouting.bean.RouterSet">
 		<property name="routeFieldStart" value="0"></property>
 		<property name="routeFieldEnd" value="9200000000000000000"></property>
-		<property name="dbNumber" value="2"></property>
+		<property name="dbNumber" value="3"></property>
 		<property name="routeType" value="2"></property>
 		<property name="ruleType" value="3"></property>
-		<property name="tableNumber" value="2"></property>
+		<property name="tableNumber" value="5"></property>
 		<property name="dbKeyArray">
 			<list>
 				<value>db1</value>
 				<value>db2</value>
+				<value>db3</value>
 			</list>
 		</property>
 	</bean>

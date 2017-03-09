@@ -6,5 +6,5 @@ import com.sub.dt.vo.UserVo;
 
 public interface IUserService {
 
-	public User getUserById(UserVo userVo);
+	public User selectByUserNum(UserVo userVo);
 }

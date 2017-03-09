@@ -21,7 +21,7 @@ public class UserController {
 	@RequestMapping("/showUser")
 	public String toIndex(HttpServletRequest request,Model model){
 		int userId = Integer.parseInt(request.getParameter("id"));
-		User user = this.userService.getUserById(null);
+		User user = this.userService.selectByUserNum(null);
 		model.addAttribute("user", user);
 		return "showUser";
 	}
@@ -31,8 +31,8 @@ public class UserController {
 	public String test(UserVo userVo,Model model){
 		userVo = new UserVo();
 		userVo.setId(1);
-		userVo.setUserNum("2323sdf");
-		User user = this.userService.getUserById(userVo);
+		userVo.setUserNum("3");
+		User user = this.userService.selectByUserNum(userVo);
 		model.addAttribute("user", user);
 		return "showUser";
 	}
