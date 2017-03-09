@@ -12,8 +12,8 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 /**
- * Created by supers on 2017/3/9.
- * 根据指定变量动态切 库和表
+ * @Description 根据指定变量动态切 库和表
+ * @Autohr supers【weChat:13031016567】
  */
 public class DBRouterImpl implements DBRouter {
 

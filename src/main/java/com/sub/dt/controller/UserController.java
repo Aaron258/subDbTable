@@ -15,19 +15,10 @@ public class UserController {
 	@Resource
 	private IUserService userService;
 	
-	@RequestMapping("/showUser")
-	public String toIndex(HttpServletRequest request,Model model){
-		int userId = Integer.parseInt(request.getParameter("id"));
-		User user = this.userService.selectByUserNum(null);
-		model.addAttribute("user", user);
-		return "showUser";
-	}
-
-
-	@RequestMapping("/test")
-	public String test(User user,Model model){
+	@RequestMapping("/queryUser")
+	public String toIndex(HttpServletRequest request,Model model,User user){
 		User userDb = this.userService.selectByUserNum(user);
 		model.addAttribute("user", userDb);
-		return "showUser";
+		return "queryUser";
 	}
 }

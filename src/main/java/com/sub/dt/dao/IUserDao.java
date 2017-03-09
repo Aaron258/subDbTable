@@ -6,7 +6,7 @@ public interface IUserDao {
 
     /**
      * @Description
-     * @Autohr      supers【weChat:13031016567】
+     * @Autohr supers【weChat:13031016567】
      */
     int insertUser(User user);
 
@@ -14,7 +14,7 @@ public interface IUserDao {
      * @Description
      * @Autohr supers【weChat:13031016567】
      */
-    int deleteByuserNum(String userNum);
+    int deleteByuserNum(User user);
 
     /**
      * @Description

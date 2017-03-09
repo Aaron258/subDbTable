@@ -2,6 +2,10 @@ package com.sub.dt.service;
 
 import com.sub.dt.pojo.User;
 
+/**
+ * @Description
+ * @Autohr supers【weChat:13031016567】
+ */
 public interface IUserService {
 
 	/**
@@ -14,7 +18,7 @@ public interface IUserService {
 	 * @Description
 	 * @Autohr supers【weChat:13031016567】
 	 */
-	public int deleteByuserNum(String userNum);
+	public int deleteByuserNum(User user);
 
 	/**
 	 * @Description

@@ -8,26 +8,33 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+/**
+ * @Description
+ * @Autohr supers【weChat:13031016567】
+ */
 @Service("userService")
 public class UserServiceImpl implements IUserService {
 
-	@Resource
-	private IUserDao userDao;
+    @Resource
+    private IUserDao userDao;
 
-	public int insertUser(User user) {
-		return this.userDao.insertUser(user);
-	}
+    @Router
+    public int insertUser(User user) {
+        return this.userDao.insertUser(user);
+    }
 
-	public int deleteByuserNum(String userNum) {
-		return this.userDao.deleteByuserNum(userNum);
-	}
+    @Router
+    public int deleteByuserNum(User user) {
+        return this.userDao.deleteByuserNum(user);
+    }
 
-	public int updateByUserNum(User user) {
-		return this.userDao.updateByUserNum(user);
-	}
+    @Router
+    public int updateByUserNum(User user) {
+        return this.userDao.updateByUserNum(user);
+    }
 
-	@Router
-	public User selectByUserNum(User user) {
-		return this.userDao.selectByUserNum(user);
-	}
+    @Router
+    public User selectByUserNum(User user) {
+        return this.userDao.selectByUserNum(user);
+    }
 }

@@ -3,7 +3,8 @@ package com.sub.dt.dbRouting.bean;
 import java.util.List;
 
 /**
- * Created by supers on 2017/3/9.
+ * @Description
+ * @Autohr supers【weChat:13031016567】
  */
 public class RouterSet {
 

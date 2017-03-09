@@ -2,6 +2,10 @@ package com.sub.dt.pojo;
 
 import com.sub.dt.dbRouting.BaseDomain;
 
+/**
+ * @Description 与表中实体映射bean
+ * @Autohr supers【weChat:13031016567】
+ */
 public class User extends BaseDomain{
     private Integer id;
 

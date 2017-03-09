@@ -3,7 +3,8 @@ package com.sub.dt.dbRouting;
 import java.io.Serializable;
 
 /**
- * Created by supers on 2017/3/9.
+ * @Description 所有pojo必须继承此bean 才能使用分库分表
+ * @Autohr supers【weChat:13031016567】
  */
 public class BaseDomain  implements Serializable {
 
