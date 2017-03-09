@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import com.sub.dt.dbRouting.annotation.Router;
+import com.sub.dt.vo.UserVo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ public class UserController {
 	@RequestMapping("/showUser")
 	public String toIndex(HttpServletRequest request,Model model){
 		int userId = Integer.parseInt(request.getParameter("id"));
-		User user = this.userService.getUserById(userId);
+		User user = this.userService.getUserById(userId,null);
 		model.addAttribute("user", user);
 		return "showUser";
 	}
@@ -28,9 +29,10 @@ public class UserController {
 
 	@Router
 	@RequestMapping("/test")
-	public String test(HttpServletRequest request,Model model){
-		int userId = Integer.parseInt(request.getParameter("id"));
-		User user = this.userService.getUserById(userId);
+	public String test(UserVo userVo,Model model){
+		userVo = new UserVo();
+		userVo.setUserNum("2323sdf");
+		User user = this.userService.getUserById(userVo.getId(),userVo);
 		model.addAttribute("user", user);
 		return "showUser";
 	}

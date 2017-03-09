@@ -5,19 +5,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class RouterUtils {
-
-    private static final Logger log	= LoggerFactory.getLogger(RouterUtils.class);
+    private static final Logger log = LoggerFactory.getLogger(RouterUtils.class);
     /**
-     * Ä¬ÈÏ±àÂë
+     * é»˜è®¤ç¼–ç 
      */
     private final static String encode = "utf-8";
     /**
-     * ×î´ó×ÊÔ´Êý
+     * æœ€å¤§èµ„æºæ•°
      */
     private final static int resourceMax = 10000;
 
     /**
-     * »ñÈ¡hashCode
+     * èŽ·å–hashCode
      *
      * @param routeValue
      * @return
@@ -28,13 +27,13 @@ public class RouterUtils {
             String pinBase64 = Base64Binrary.encodeBase64Binrary(routeValue.getBytes(encode));
             hashCode = Math.abs(pinBase64.hashCode());
         } catch (Exception e) {
-            log.error("hashCode Ê§°Ü", e);
+            log.error("hashCode å¤±è´¥", e);
         }
         return hashCode;
     }
 
     /**
-     * »ñÈ¡×ÊÔ´Âë
+     * èŽ·å–èµ„æºç 
      *
      * @param routeValue
      * @return
@@ -56,6 +55,6 @@ public class RouterUtils {
         int dbIndex = routeFieldInt % mode / 200;
         int tbIndex = routeFieldInt % 200;
 
-        System.out.println(dbIndex+"-->"+tbIndex);
+        System.out.println(dbIndex + "-->" + tbIndex);
     }
 }

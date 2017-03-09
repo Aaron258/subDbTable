@@ -55,4 +55,37 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
+    <bean id="dBRouter" class="com.sub.dt.dbRouting.router.DBRouterImpl">
+        <property name="routerSetList">
+            <!-- 标识符类型 -->
+            <list>
+                <ref bean="dbRuleSet1" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="dbRuleSet1" class="com.sub.dt.dbRouting.bean.RouterSet">
+        <property name="routeFieldStart" value="0"></property>
+        <property name="routeFieldEnd" value="9200000000000000000"></property>
+        <property name="dbNumber" value="6"></property>
+        <property name="routeType" value="2"></property>
+        <property name="ruleType" value="3"></property>
+        <property name="tableNumber" value="2"></property>
+        <property name="dbKeyArray">
+            <list>
+                <value>db1</value>
+                <value>db2</value>
+                <value>db3</value>
+                <value>db4</value>
+                <value>db5</value>
+                <value>db6</value>
+
+                <!--zhangdongfang 2016-09-27 增加性能测试数据源-->
+                <value>1db</value>
+                <value>2db</value>
+                <value>3db</value>
+            </list>
+        </property>
+    </bean>
+
 </beans>

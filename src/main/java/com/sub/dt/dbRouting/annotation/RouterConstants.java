@@ -6,7 +6,7 @@ package com.sub.dt.dbRouting.annotation;
 public class RouterConstants {
 
     /**
-     * 传递给ibatis引擎的默认属性名
+     * 缁檌batis寮曟搸鍙傛暟鐨勯粯璁ゅ睘鎬у悕
      */
     public static final String ROUTER_FIELD_DEFAULT = "userNum";
 

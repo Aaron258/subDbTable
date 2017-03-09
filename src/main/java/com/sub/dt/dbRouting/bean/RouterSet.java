@@ -7,52 +7,32 @@ import java.util.List;
  */
 public class RouterSet {
 
-    /**
-     * ¸ù¾İ×Ö·û´®
-     */
-    public final static int RULE_TYPE_STR = 3;
+    /**æ ¹æ®å­—ç¬¦ä¸²*/
+    public final static int RULE_TYPE_STR=3;
 
+    public final static int ROUTER_TYPE_DB=0;
 
-    public final static int ROUTER_TYPE_DB = 0;
+    public final static int ROUTER_TYPE_TABLE =1;
 
-    public final static int ROUTER_TYPE_TABLE = 1;
+    public final static int ROUTER_TYPE_DBANDTABLE=2;
 
-    public final static int ROUTER_TYPE_DBANDTABLE = 2;
-
-    /**
-     * Êı¾İ¿â±íµÄÂß¼­KEY,ÓëÊı¾İÔ´MAPÅäÖÃÖĞµÄkeyÒ»ÖÂ
-     */
+    /**æ•°æ®åº“è¡¨çš„é€»è¾‘KEY,ä¸æ•°æ®æºMAPé…ç½®ä¸­çš„keyä¸€è‡´*/
     private List<String> dbKeyArray;
 
-    /**
-     * Êı¾İ¿âÊıÁ¿
-     */
+    /**æ•°æ®åº“æ•°é‡*/
     private int dbNumber;
-    /**
-     * Êı¾İ±íÊıÁ¿
-     */
+    /**æ•°æ®è¡¨æ•°é‡*/
     private int tableNumber;
-    /**
-     * Êı¾İ±íindexÑùÊ½
-     */
+    /**æ•°æ®è¡¨indexæ ·å¼*/
     private String tableIndexStyle;
-    /**
-     * Id¿ªÊ¼
-     */
+    /**Idå¼€å§‹*/
     private String routeFieldStart;
-    /**
-     * Id½áÊø
-     */
+    /**Idç»“æŸ*/
     private String routeFieldEnd;
-    /**
-     * ¹æÔòÀàĞÍ
-     */
+    /**è§„åˆ™ç±»å‹*/
     private int ruleType;
-    /**
-     * Â·ÓÉÀàĞÍÀàĞÍ
-     */
+    /**è·¯ç”±ç±»å‹ç±»å‹*/
     private int routeType;
-
 
     public static int getRULE_TYPE_STR() {
         return RULE_TYPE_STR;
