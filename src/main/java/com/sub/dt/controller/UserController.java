@@ -1,16 +1,13 @@
 package com.sub.dt.controller;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
-import com.sub.dt.dbRouting.annotation.Router;
-import com.sub.dt.vo.UserVo;
+import com.sub.dt.pojo.User;
+import com.sub.dt.service.IUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.sub.dt.pojo.User;
-import com.sub.dt.service.IUserService;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/user")
@@ -28,12 +25,9 @@ public class UserController {
 
 
 	@RequestMapping("/test")
-	public String test(UserVo userVo,Model model){
-		userVo = new UserVo();
-		userVo.setId(1);
-		userVo.setUserNum("3");
-		User user = this.userService.selectByUserNum(userVo);
-		model.addAttribute("user", user);
+	public String test(User user,Model model){
+		User userDb = this.userService.selectByUserNum(user);
+		model.addAttribute("user", userDb);
 		return "showUser";
 	}
 }

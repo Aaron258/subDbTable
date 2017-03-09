@@ -4,15 +4,27 @@ import com.sub.dt.pojo.User;
 
 public interface IUserDao {
 
-    int deleteByPrimaryKey(Integer id);
+    /**
+     * @Description
+     * @Autohr      supers【weChat:13031016567】
+     */
+    int insertUser(User user);
 
-    int insert(User record);
+    /**
+     * @Description
+     * @Autohr supers【weChat:13031016567】
+     */
+    int deleteByuserNum(String userNum);
 
-    int insertSelective(User record);
+    /**
+     * @Description
+     * @Autohr supers【weChat:13031016567】
+     */
+    int updateByUserNum(User user);
 
+    /**
+     * @Description
+     * @Autohr supers【weChat:13031016567】
+     */
     User selectByUserNum(User user);
-
-    int updateByPrimaryKeySelective(User record);
-
-    int updateByPrimaryKey(User record);
 }

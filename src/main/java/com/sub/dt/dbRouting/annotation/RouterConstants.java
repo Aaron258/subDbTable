@@ -1,12 +1,13 @@
 package com.sub.dt.dbRouting.annotation;
 
 /**
- * Created by wangshupeng1 on 2017/3/9.
+ * Created by supers on 2017/3/9.
  */
 public class RouterConstants {
 
     /**
-     * 给ibatis引擎参数的默认属性名
+     * @Description 给ibatis引擎参数的默认属性名
+     * @Autohr supers【weChat:13031016567】
      */
     public static final String ROUTER_FIELD_DEFAULT = "userNum";
 

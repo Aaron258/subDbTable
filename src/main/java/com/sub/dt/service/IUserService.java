@@ -1,10 +1,32 @@
 package com.sub.dt.service;
 
-import com.sub.dt.dbRouting.annotation.Router;
 import com.sub.dt.pojo.User;
-import com.sub.dt.vo.UserVo;
 
 public interface IUserService {
 
-	public User selectByUserNum(UserVo userVo);
+	/**
+	 * @Description
+	 * @Autohr supers【weChat:13031016567】
+	 */
+	public int insertUser(User user);
+
+	/**
+	 * @Description
+	 * @Autohr supers【weChat:13031016567】
+	 */
+	public int deleteByuserNum(String userNum);
+
+	/**
+	 * @Description
+	 * @Autohr supers【weChat:13031016567】
+	 */
+	public int updateByUserNum(User user);
+
+	/**
+	 * @Description
+	 * @Autohr supers【weChat:13031016567】
+	 */
+	public User selectByUserNum(User user);
+
+
 }

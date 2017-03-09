@@ -12,7 +12,7 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 /**
- * Created by wangshupeng1 on 2017/3/9.
+ * Created by supers on 2017/3/9.
  * 根据指定变量动态切 库和表
  */
 public class DBRouterImpl implements DBRouter {
@@ -46,7 +46,8 @@ public class DBRouterImpl implements DBRouter {
 
 
     /**
-     * 根据数据字段来判断属于哪个段的规则,获得数据库key
+     * @Description 根据数据字段来判断属于哪个段的规则,获得数据库key
+     * @Autohr supers【weChat:13031016567】
      */
     private String getDbKey(List<RouterSet> routerSets, int routeFieldInt) {
         RouterSet routerSet = null;
@@ -89,7 +90,8 @@ public class DBRouterImpl implements DBRouter {
 
 
     /**
-     * 此方法是将例如+++0000根式的字符串替换成传参数字例如44 变成+++0044
+     * @Description 此方法是将例如+++0000根式的字符串替换成传参数字例如44 变成+++0044
+     * @Autohr supers【weChat:13031016567】
      */
     private static String getFormateTableIndex(String style, long tbIndex) {
         String tableIndex = null;

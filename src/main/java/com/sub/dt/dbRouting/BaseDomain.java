@@ -3,7 +3,7 @@ package com.sub.dt.dbRouting;
 import java.io.Serializable;
 
 /**
- * Created by wangshupeng1 on 2017/3/9.
+ * Created by supers on 2017/3/9.
  */
 public class BaseDomain  implements Serializable {
 
